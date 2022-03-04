@@ -34,4 +34,4 @@ switch(roll){
 } 
 return answer;
 }
-alert(ball()
+alert(ball())
