@@ -1,5 +1,6 @@
 let answer;
-const ball = (/*question*/) => {
+let Q = prompt("Enter a queston");
+const ball = () => {
   let roll = Math.floor(Math.random() * 10);
   switch (roll) {
     case 1:
@@ -34,4 +35,4 @@ const ball = (/*question*/) => {
   }
   return answer;
 };
-alert(ball());
+alert("Your anwser to " + Q + " is " + ball());
