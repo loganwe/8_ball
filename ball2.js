@@ -1,5 +1,5 @@
 let answer;
-let Q = prompt("Enter a queston");
+let Q = prompt("Enter a yes/no queston");
 function ball() {
   let roll = Math.floor(Math.random() * 10);
   switch (roll) {
