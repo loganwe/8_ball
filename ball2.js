@@ -37,3 +37,4 @@ function ball() {
   alert("Your anwser to " + Q + " is " + answer);
 }
 ball();
+footer();
