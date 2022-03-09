@@ -1,5 +1,7 @@
 let answer;
-let Q = prompt("Enter a yes/no queston");
+let Q = prompt("Enter a yes or no queston");
+let testMode = false;
+let testing = "go away";
 function ball() {
   let roll = Math.floor(Math.random() * 10);
   switch (roll) {
@@ -33,8 +35,18 @@ function ball() {
     default:
       answer = "uhh...no!!!!!!!!!";
   }
-
-  alert("Your anwser to " + Q + " is " + answer);
+  if (testMode) {
+    answer = testing;
+  }
+  switch (answer) {
+    case "I refuse to answer":
+      alert("I refuse to answer");
+      break;
+    case "go away":
+      alert("go away!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+      break;
+    default:
+      alert("Your anwser to " + Q + " is " + answer);
+  }
 }
 ball();
-footer();
