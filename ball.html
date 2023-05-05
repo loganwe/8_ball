@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8 Ball</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+   <link rel="icon" type="image" href="8_ball.jpg">
+    <style>
+    body {
+  text-align: center;
+  background-image: url("8_ball.jpg");
+  color: black;
+}
+input{
+font-size:27px; 
+}
+button{
+font-size: 27px;
+}
+#output{
+font-size: 27px;
+color:blue;
+}
+</style>
+  </head>
+  <body>
+    <h1>8 Ball</h1>
+
+    <br />
+    <form>
+      <input type="text" id="Q" placeholder="Enter a yes or no queston" />
+      <br />
+      <input
+        type="password"
+        placeholder="Enter library password"
+        id="admin password"
+      />
+      <br />
+      <button type="button" id="submit">submit</button>
+      <div id="output"></div>
+    </form>
+
+    <script>
+      function reset(){
+      setTimeout(function(){
+        document.location.reload();
+      },2500)
+      }
+    document.getElementById("submit").onclick = function () {
+  let answer;
+  let inadmin = document.getElementById("admin password").value;
+  let Q = document.getElementById("Q").value;
+  let admin;
+  let testMode = false;
+  let testing = "absolutely";
+  let roll = Math.floor(Math.random() * 10);
+  switch (roll) {
+    case 1:
+      answer = "go away";
+      break;
+    case 2:
+      answer = "absolutely not";
+      break;
+    case 3:
+      answer = "no";
+      break;
+    case 4:
+      answer = "I refuse to answer";
+      break;
+    case 5:
+      answer = "yeah!";
+      break;
+    case 6:
+      answer = "it is certain";
+      break;
+    case 7:
+      answer = "maaaaaaaaaaaaaaybeeeeeee";
+      break;
+    case 8:
+      answer = "my sorces say yes";
+      break;
+    case 9:
+      answer = "absolutely";
+      break;
+    default:
+      answer = "uhh...no!!!!!!!!!";
+  }
+  if (inadmin === "Og") {
+    admin = true;
+  } else {
+    admin = false;
+  }
+  if (testMode) {
+    answer = testing;
+  }
+  if (admin) {
+    switch (Q) {
+      case "is Hannah great":
+        document.getElementById("output").innerHTML = "Yes";
+
+        reset();
+        break;
+      case "is Logan great":
+        document.getElementById("output").innerHTML = "yeah!!!!!!!!!!!!!";
+        reset();
+        break;
+      case "is Jackson great":
+        document.getElementById("output").innerHTML = "yep";
+        reset();
+        break;
+      case "is Mia the best dog ever":
+        document.getElementById("output").innerHTML = "duh";
+        reset();
+        break;
+        case "is Nala cute":
+        document.getElementById("output").innerHTML = "no";
+        setTimeout(function(){
+        document.getElementById("output").innerHTML ="jk yeah";
+        },1000)
+        reset();
+        break;
+      default:
+        document.getElementById("output").innerHTML =
+          "Your anwser to " + Q + " is " + answer;
+        reset();
+        break;
+    }
+  } else if (!admin) {
+    switch (answer) {
+      case "I refuse to answer":
+        document.getElementById("output").innerHTML = "I refuse to answer";
+        reset();
+        break;
+      case "go away":
+        document.getElementById("output").innerHTML =
+          "go away!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+          reset();
+        break;
+      case "my sources say yes":
+        document.getElementById("output").innerHTML = "My sorces say yes";
+             reset();
+        break;
+      default:
+        document.getElementById("output").innerHTML =
+           answer;
+          reset();
+    }
+  }
+};
+</script>
+  </body>
+</html>
