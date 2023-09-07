@@ -43,7 +43,9 @@ background-color:black;
     <script>
       function reset(){
       setTimeout(function(){
-        document.location.reload();
+        Q.innerHTML="";
+        inadmin.innerHTML="";
+        document.getElementById("output").innerHTML = "";
       },2500)
       }
     document.getElementById("submit").onclick = function () {
