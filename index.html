@@ -18,7 +18,8 @@ font-size: 27px;
 }
 #output{
 font-size: 27px;
-color:darkgreen;
+color:green;
+background-color:black;
 }
 </style>
   </head>
@@ -27,7 +28,7 @@ color:darkgreen;
 
     <br />
     <form>
-      <input type="text" id="Q" placeholder="Enter a yes or no queston" />
+      <input type="text" id="Q" placeholder="Enter a yes or no question" />
       <br />
       <input
         type="password"
@@ -76,7 +77,7 @@ color:darkgreen;
       answer = "maaaaaaaaaaaaaaybeeeeeee";
       break;
     case 8:
-      answer = "my sorces say yes";
+      answer = "my sources say yes";
       break;
     case 9:
       answer = "absolutely";
@@ -136,7 +137,7 @@ color:darkgreen;
           reset();
         break;
       case "my sources say yes":
-        document.getElementById("output").innerHTML = "My sorces say yes";
+        document.getElementById("output").innerHTML = "My sources say yes";
              reset();
         break;
       default:
